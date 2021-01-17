@@ -46,7 +46,7 @@ transform = T.Compose([
 testsize = 1000
 dataset = D.CIFAR10("./data", train=False, transform=transform, download=True)
 dataset = Subset(dataset, range(testsize))
-dataloader = DataLoader(dataset, batch_size=2, shuffle=True)
+dataloader = DataLoader(dataset, batch_size=2)
 
 
 def accuracy(model):
